@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<nffgs xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+	xsd:noNamespaceSchemaLocation="nffgInfo.xsd">
+
+
+	<nffg>
+		<name>nffg1</name>
+		<lastUpdate>2015-07-21T21:00:00.000+02:00</lastUpdate>
+
+		<node>
+			<name>nodos1</name>
+			<functionality>FW</functionality>
+		</node>
+
+		<node>
+			<name>nododst1</name>
+			<functionality>NAT</functionality>
+		</node>
+
+		<node>
+			<name>nodoprova1</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<node>
+			<name>nodopluto1</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<node>
+			<name>nodopluto11</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<link>
+			<name>link1</name>
+			<src>nodos1</src>
+			<dst>nodopluto1</dst>
+		</link>
+
+		<link>
+			<name>link2</name>
+			<src>nodos1</src>
+			<dst>nododst1</dst>
+		</link>
+
+		<policy>
+			<name>policy1</name>
+			<positivity>true</positivity>
+			<src>nodopluto1</src>
+			<dst>nodos1</dst>
+			<verification>
+				<verificationTime>2016-07-21T21:00:00.000+02:00</verificationTime>
+				<result>true</result>
+				<message>This policy is Verified</message>
+			</verification>
+		</policy>
+		
+		<policy>
+			<name>PolicyTraversal1</name>
+			<positivity>true</positivity>
+			<src>nodos1</src>
+			<dst>nodoprova1</dst>
+			<traversal>
+				<functionality>DPI</functionality>
+			</traversal>
+		</policy>
+
+	</nffg>
+
+	<nffg>
+		<name>pluto2</name>
+		<lastUpdate>2015-07-21T21:00:00.000+02:00</lastUpdate>
+
+		<node>
+			<name>nodos2</name>
+			<functionality>FW</functionality>
+		</node>
+
+		<node>
+			<name>nododst2</name>
+			<functionality>NAT</functionality>
+		</node>
+
+		<node>
+			<name>nodoprova2</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<node>
+			<name>nodopluto2</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<node>
+			<name>nodopluto22</name>
+			<functionality>DPI</functionality>
+		</node>
+
+		<link>
+			<name>link2</name>
+			<src>nodos2</src>
+			<dst>nodopluto2</dst>
+		</link>
+
+		<link>
+			<name>link22</name>
+			<src>nodos2</src>
+			<dst>nododst2</dst>
+		</link>
+
+		<policy>
+			<name>policy1</name>
+			<positivity>true</positivity>
+			<src>nodopluto2</src>
+			<dst>nodos2</dst>
+		</policy>
+
+		<policy>
+			<name>policy2</name>
+			<positivity>true</positivity>
+			<src>nodopluto2</src>
+			<dst>nodos2</dst>
+		</policy>
+		
+		<policy>
+			<name>policy3</name>
+			<positivity>true</positivity>
+			<src>nodopluto2</src>
+			<dst>nodos2</dst>
+			<traversal>
+				<functionality>FW</functionality>
+			</traversal>
+			<verification>
+				<verificationTime>2016-07-21T21:00:00.000+02:00</verificationTime>
+				<result>false</result>
+				<message>This policy is not Verified</message>
+			</verification>
+		</policy>
+
+	</nffg>
+</nffgs>

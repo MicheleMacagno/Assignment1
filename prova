@@ -1,0 +1,1777 @@
+Buildfile: C:\Users\Michele Macagno\workspace_neon\Assignment1b\build.xml
+
+buildNFFGInfo:
+     [echo] Building NFFGInfo (if needed)...
+     [echo] Done.
+
+setseed:
+
+NFFGInfo:
+     [java] Random NffgVerifier: Using seed: 10
+     [java] Random NffgVerifier: Test case: 10
+     [java] #
+     [java] #Number of Nffgs: 4
+     [java] #
+     [java] #List of NFFgs:
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] 
+     [java] Data for NFFG Nffg3
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] 
+     [java] Update time: 27/09/2016 04:04
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Number of Nodes: 33
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER5	Type: WEB_SERVER	Number of links: 6
+     [java] List of Links for node WEB_SERVER5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link187	WEB_SERVER5	VPN13
+     [java] Link28	WEB_SERVER5	DPI3
+     [java] Link157	WEB_SERVER5	NAT1
+     [java] Link178	WEB_SERVER5	DPI8
+     [java] Link214	WEB_SERVER5	VPN12
+     [java] Link213	WEB_SERVER5	FW10
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER4	Type: WEB_SERVER	Number of links: 4
+     [java] List of Links for node WEB_SERVER4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link26	WEB_SERVER4	NAT1
+     [java] Link119	WEB_SERVER4	FW11
+     [java] Link39	WEB_SERVER4	NAT15
+     [java] Link167	WEB_SERVER4	NAT9
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER2	Type: WEB_SERVER	Number of links: 3
+     [java] List of Links for node WEB_SERVER2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link22	WEB_SERVER2	FW6
+     [java] Link108	WEB_SERVER2	NAT15
+     [java] Link148	WEB_SERVER2	SPAM14
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER1	Type: WEB_SERVER	Number of links: 4
+     [java] List of Links for node WEB_SERVER1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link20	WEB_SERVER1	FW10
+     [java] Link176	WEB_SERVER1	SPAM14
+     [java] Link146	WEB_SERVER1	CACHE4
+     [java] Link212	WEB_SERVER1	NAT1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node FW6	Type: FW	Number of links: 10
+     [java] List of Links for node FW6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link153	FW6	NAT2
+     [java] Link22	FW6	WEB_SERVER2
+     [java] Link69	FW6	SPAM14
+     [java] Link238	FW6	CACHE4
+     [java] Link191	FW6	DPI8
+     [java] Link218	FW6	WEB_CLIENT0
+     [java] Link229	FW6	MAIL_CLIENT1
+     [java] Link95	FW6	MAIL_CLIENT4
+     [java] Link94	FW6	WEB_SERVER0
+     [java] Link93	FW6	MAIL_SERVER6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM14	Type: SPAM	Number of links: 9
+     [java] List of Links for node SPAM14
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link89	SPAM14	WEB_SERVER4
+     [java] Link241	SPAM14	MAIL_CLIENT2
+     [java] Link133	SPAM14	CACHE4
+     [java] Link110	SPAM14	DPI3
+     [java] Link140	SPAM14	NAT9
+     [java] Link180	SPAM14	DPI8
+     [java] Link30	SPAM14	MAIL_SERVER6
+     [java] Link236	SPAM14	MAIL_CLIENT4
+     [java] Link147	SPAM14	FW11
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER0	Type: WEB_SERVER	Number of links: 4
+     [java] List of Links for node WEB_SERVER0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link240	WEB_SERVER0	DPI3
+     [java] Link68	WEB_SERVER0	NAT15
+     [java] Link18	WEB_SERVER0	FW10
+     [java] Link102	WEB_SERVER0	FW6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT15	Type: NAT	Number of links: 13
+     [java] List of Links for node NAT15
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link99	NAT15	WEB_SERVER4
+     [java] Link154	NAT15	NAT2
+     [java] Link38	NAT15	SPAM7
+     [java] Link162	NAT15	CACHE4
+     [java] Link2	NAT15	MAIL_CLIENT1
+     [java] Link226	NAT15	MAIL_CLIENT4
+     [java] Link217	NAT15	SPAM14
+     [java] Link239	NAT15	MAIL_SERVER6
+     [java] Link135	NAT15	VPN12
+     [java] Link234	NAT15	WEB_CLIENT0
+     [java] Link73	NAT15	MAIL_CLIENT7
+     [java] Link115	NAT15	VPN0
+     [java] Link225	NAT15	WEB_SERVER1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT8	Type: WEB_CLIENT	Number of links: 4
+     [java] List of Links for node WEB_CLIENT8
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link66	WEB_CLIENT8	CACHE5
+     [java] Link16	WEB_CLIENT8	VPN0
+     [java] Link171	WEB_CLIENT8	SPAM7
+     [java] Link126	WEB_CLIENT8	VPN13
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT6	Type: WEB_CLIENT	Number of links: 5
+     [java] List of Links for node WEB_CLIENT6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	WEB_CLIENT6	FW10
+     [java] Link182	WEB_CLIENT6	CACHE5
+     [java] Link168	WEB_CLIENT6	NAT1
+     [java] Link134	WEB_CLIENT6	FW11
+     [java] Link114	WEB_CLIENT6	VPN13
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node FW11	Type: FW	Number of links: 7
+     [java] List of Links for node FW11
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link34	FW11	NAT15
+     [java] Link122	FW11	VPN0
+     [java] Link231	FW11	WEB_SERVER4
+     [java] Link193	FW11	SPAM7
+     [java] Link194	FW11	MAIL_CLIENT1
+     [java] Link139	FW11	WEB_CLIENT5
+     [java] Link137	FW11	WEB_CLIENT6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node FW10	Type: FW	Number of links: 8
+     [java] List of Links for node FW10
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	FW10	WEB_CLIENT6
+     [java] Link144	FW10	NAT2
+     [java] Link20	FW10	WEB_SERVER1
+     [java] Link160	FW10	DPI8
+     [java] Link18	FW10	WEB_SERVER0
+     [java] Link96	FW10	VPN0
+     [java] Link123	FW10	WEB_SERVER4
+     [java] Link235	FW10	MAIL_CLIENT7
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN12	Type: VPN	Number of links: 9
+     [java] List of Links for node VPN12
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link131	VPN12	WEB_SERVER0
+     [java] Link75	VPN12	MAIL_SERVER7
+     [java] Link143	VPN12	WEB_SERVER2
+     [java] Link209	VPN12	SPAM14
+     [java] Link208	VPN12	NAT15
+     [java] Link183	VPN12	WEB_SERVER4
+     [java] Link52	VPN12	WEB_SERVER1
+     [java] Link40	VPN12	DPI8
+     [java] Link200	VPN12	DPI3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT2	Type: MAIL_CLIENT	Number of links: 3
+     [java] List of Links for node MAIL_CLIENT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link205	MAIL_CLIENT2	VPN0
+     [java] Link4	MAIL_CLIENT2	VPN13
+     [java] Link206	MAIL_CLIENT2	VPN12
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT1	Type: MAIL_CLIENT	Number of links: 8
+     [java] List of Links for node MAIL_CLIENT1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link170	MAIL_CLIENT1	CACHE4
+     [java] Link219	MAIL_CLIENT1	SPAM14
+     [java] Link35	MAIL_CLIENT1	FW10
+     [java] Link2	MAIL_CLIENT1	NAT15
+     [java] Link149	MAIL_CLIENT1	NAT9
+     [java] Link228	MAIL_CLIENT1	FW11
+     [java] Link113	MAIL_CLIENT1	FW6
+     [java] Link125	MAIL_CLIENT1	DPI8
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN13	Type: VPN	Number of links: 9
+     [java] List of Links for node VPN13
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link152	VPN13	WEB_CLIENT3
+     [java] Link243	VPN13	WEB_CLIENT6
+     [java] Link128	VPN13	FW6
+     [java] Link4	VPN13	MAIL_CLIENT2
+     [java] Link63	VPN13	DPI8
+     [java] Link189	VPN13	MAIL_CLIENT4
+     [java] Link159	VPN13	NAT9
+     [java] Link71	VPN13	VPN0
+     [java] Link169	VPN13	WEB_CLIENT8
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE4	Type: CACHE	Number of links: 13
+     [java] List of Links for node CACHE4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link190	CACHE4	VPN12
+     [java] Link56	CACHE4	VPN13
+     [java] Link10	CACHE4	WEB_CLIENT5
+     [java] Link100	CACHE4	FW6
+     [java] Link165	CACHE4	MAIL_CLIENT4
+     [java] Link151	CACHE4	WEB_SERVER4
+     [java] Link116	CACHE4	MAIL_SERVER7
+     [java] Link74	CACHE4	NAT15
+     [java] Link62	CACHE4	DPI8
+     [java] Link112	CACHE4	MAIL_CLIENT7
+     [java] Link104	CACHE4	WEB_SERVER2
+     [java] Link82	CACHE4	WEB_SERVER5
+     [java] Link158	CACHE4	WEB_CLIENT0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE5	Type: CACHE	Number of links: 9
+     [java] List of Links for node CACHE5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link130	CACHE5	MAIL_SERVER7
+     [java] Link141	CACHE5	CACHE4
+     [java] Link210	CACHE5	SPAM14
+     [java] Link132	CACHE5	DPI8
+     [java] Link181	CACHE5	WEB_SERVER2
+     [java] Link184	CACHE5	WEB_CLIENT0
+     [java] Link24	CACHE5	MAIL_SERVER3
+     [java] Link172	CACHE5	MAIL_SERVER6
+     [java] Link233	CACHE5	MAIL_CLIENT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT4	Type: MAIL_CLIENT	Number of links: 6
+     [java] List of Links for node MAIL_CLIENT4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link185	MAIL_CLIENT4	FW10
+     [java] Link192	MAIL_CLIENT4	SPAM14
+     [java] Link105	MAIL_CLIENT4	CACHE4
+     [java] Link41	MAIL_CLIENT4	NAT15
+     [java] Link8	MAIL_CLIENT4	VPN0
+     [java] Link60	MAIL_CLIENT4	FW11
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER3	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link221	MAIL_SERVER3	DPI3
+     [java] Link198	MAIL_SERVER3	NAT15
+     [java] Link24	MAIL_SERVER3	CACHE5
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER6	Type: MAIL_SERVER	Number of links: 4
+     [java] List of Links for node MAIL_SERVER6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link54	MAIL_SERVER6	NAT2
+     [java] Link30	MAIL_SERVER6	SPAM14
+     [java] Link201	MAIL_SERVER6	DPI3
+     [java] Link51	MAIL_SERVER6	NAT15
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT7	Type: MAIL_CLIENT	Number of links: 6
+     [java] List of Links for node MAIL_CLIENT7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link44	MAIL_CLIENT7	FW10
+     [java] Link188	MAIL_CLIENT7	FW6
+     [java] Link14	MAIL_CLIENT7	NAT1
+     [java] Link195	MAIL_CLIENT7	VPN13
+     [java] Link46	MAIL_CLIENT7	CACHE5
+     [java] Link237	MAIL_CLIENT7	VPN12
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER7	Type: MAIL_SERVER	Number of links: 6
+     [java] List of Links for node MAIL_SERVER7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link32	MAIL_SERVER7	SPAM7
+     [java] Link87	MAIL_SERVER7	FW6
+     [java] Link242	MAIL_SERVER7	FW10
+     [java] Link215	MAIL_SERVER7	VPN12
+     [java] Link90	MAIL_SERVER7	FW11
+     [java] Link179	MAIL_SERVER7	NAT1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT5	Type: WEB_CLIENT	Number of links: 6
+     [java] List of Links for node WEB_CLIENT5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link88	WEB_CLIENT5	SPAM7
+     [java] Link174	WEB_CLIENT5	FW10
+     [java] Link10	WEB_CLIENT5	CACHE4
+     [java] Link232	WEB_CLIENT5	CACHE5
+     [java] Link121	WEB_CLIENT5	SPAM14
+     [java] Link59	WEB_CLIENT5	FW11
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT3	Type: WEB_CLIENT	Number of links: 7
+     [java] List of Links for node WEB_CLIENT3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link67	WEB_CLIENT3	SPAM14
+     [java] Link120	WEB_CLIENT3	FW6
+     [java] Link55	WEB_CLIENT3	NAT9
+     [java] Link111	WEB_CLIENT3	CACHE5
+     [java] Link79	WEB_CLIENT3	FW10
+     [java] Link6	WEB_CLIENT3	DPI3
+     [java] Link145	WEB_CLIENT3	VPN12
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN0	Type: VPN	Number of links: 14
+     [java] List of Links for node VPN0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link78	VPN0	MAIL_CLIENT7
+     [java] Link164	VPN0	MAIL_CLIENT1
+     [java] Link155	VPN0	WEB_SERVER2
+     [java] Link97	VPN0	MAIL_SERVER7
+     [java] Link220	VPN0	DPI3
+     [java] Link16	VPN0	WEB_CLIENT8
+     [java] Link92	VPN0	WEB_SERVER5
+     [java] Link117	VPN0	WEB_CLIENT5
+     [java] Link80	VPN0	FW10
+     [java] Link211	VPN0	NAT1
+     [java] Link8	VPN0	MAIL_CLIENT4
+     [java] Link72	VPN0	MAIL_SERVER6
+     [java] Link83	VPN0	WEB_CLIENT0
+     [java] Link224	VPN0	WEB_SERVER0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT1	Type: NAT	Number of links: 9
+     [java] List of Links for node NAT1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link230	NAT1	MAIL_CLIENT2
+     [java] Link43	NAT1	VPN13
+     [java] Link76	NAT1	WEB_SERVER5
+     [java] Link26	NAT1	WEB_SERVER4
+     [java] Link14	NAT1	MAIL_CLIENT7
+     [java] Link36	NAT1	CACHE5
+     [java] Link150	NAT1	SPAM14
+     [java] Link85	NAT1	MAIL_SERVER7
+     [java] Link50	NAT1	NAT15
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT0	Type: WEB_CLIENT	Number of links: 7
+     [java] List of Links for node WEB_CLIENT0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link197	WEB_CLIENT0	FW10
+     [java] Link65	WEB_CLIENT0	SPAM14
+     [java] Link166	WEB_CLIENT0	FW11
+     [java] Link0	WEB_CLIENT0	NAT9
+     [java] Link138	WEB_CLIENT0	VPN13
+     [java] Link107	WEB_CLIENT0	NAT2
+     [java] Link223	WEB_CLIENT0	VPN0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT2	Type: NAT	Number of links: 12
+     [java] List of Links for node NAT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link196	NAT2	MAIL_CLIENT4
+     [java] Link57	NAT2	WEB_SERVER1
+     [java] Link227	NAT2	MAIL_SERVER3
+     [java] Link91	NAT2	WEB_SERVER5
+     [java] Link207	NAT2	WEB_CLIENT6
+     [java] Link124	NAT2	DPI3
+     [java] Link84	NAT2	VPN12
+     [java] Link101	NAT2	NAT1
+     [java] Link61	NAT2	NAT15
+     [java] Link203	NAT2	SPAM7
+     [java] Link103	NAT2	WEB_CLIENT0
+     [java] Link136	NAT2	SPAM14
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI3	Type: DPI	Number of links: 8
+     [java] List of Links for node DPI3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link163	DPI3	NAT1
+     [java] Link177	DPI3	NAT2
+     [java] Link199	DPI3	FW6
+     [java] Link86	DPI3	MAIL_CLIENT2
+     [java] Link47	DPI3	WEB_SERVER2
+     [java] Link58	DPI3	MAIL_CLIENT1
+     [java] Link28	DPI3	WEB_SERVER5
+     [java] Link6	DPI3	WEB_CLIENT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM7	Type: SPAM	Number of links: 10
+     [java] List of Links for node SPAM7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link175	SPAM7	WEB_SERVER1
+     [java] Link77	SPAM7	WEB_SERVER5
+     [java] Link32	SPAM7	MAIL_SERVER7
+     [java] Link98	SPAM7	NAT9
+     [java] Link42	SPAM7	FW6
+     [java] Link64	SPAM7	CACHE4
+     [java] Link37	SPAM7	VPN0
+     [java] Link109	SPAM7	MAIL_SERVER3
+     [java] Link106	SPAM7	SPAM14
+     [java] Link127	SPAM7	DPI8
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI8	Type: DPI	Number of links: 11
+     [java] List of Links for node DPI8
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link45	DPI8	MAIL_SERVER7
+     [java] Link142	DPI8	NAT1
+     [java] Link186	DPI8	WEB_SERVER5
+     [java] Link49	DPI8	DPI3
+     [java] Link48	DPI8	NAT9
+     [java] Link161	DPI8	MAIL_CLIENT2
+     [java] Link81	DPI8	NAT15
+     [java] Link216	DPI8	VPN12
+     [java] Link129	DPI8	MAIL_CLIENT4
+     [java] Link156	DPI8	NAT2
+     [java] Link202	DPI8	CACHE4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT9	Type: NAT	Number of links: 7
+     [java] List of Links for node NAT9
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link53	NAT9	MAIL_CLIENT4
+     [java] Link0	NAT9	WEB_CLIENT0
+     [java] Link173	NAT9	WEB_CLIENT5
+     [java] Link70	NAT9	WEB_CLIENT3
+     [java] Link204	NAT9	WEB_CLIENT8
+     [java] Link118	NAT9	CACHE4
+     [java] Link222	NAT9	DPI8
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] #
+     [java] 
+     [java] Data for NFFG Nffg2
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] 
+     [java] Update time: 27/09/2016 10:07
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Number of Nodes: 22
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER5	Type: WEB_SERVER	Number of links: 6
+     [java] List of Links for node WEB_SERVER5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link44	WEB_SERVER5	NAT6
+     [java] Link38	WEB_SERVER5	CACHE4
+     [java] Link24	WEB_SERVER5	FW1
+     [java] Link81	WEB_SERVER5	VPN3
+     [java] Link41	WEB_SERVER5	VPN5
+     [java] Link94	WEB_SERVER5	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER4	Type: WEB_SERVER	Number of links: 2
+     [java] List of Links for node WEB_SERVER4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link22	WEB_SERVER4	NAT6
+     [java] Link97	WEB_SERVER4	NAT0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node FW1	Type: FW	Number of links: 8
+     [java] List of Links for node FW1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link56	FW1	VPN3
+     [java] Link78	FW1	VPN5
+     [java] Link89	FW1	MAIL_SERVER3
+     [java] Link43	FW1	NAT2
+     [java] Link26	FW1	WEB_SERVER6
+     [java] Link24	FW1	WEB_SERVER5
+     [java] Link72	FW1	WEB_CLIENT4
+     [java] Link83	FW1	MAIL_SERVER7
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER2	Type: WEB_SERVER	Number of links: 4
+     [java] List of Links for node WEB_SERVER2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link67	WEB_SERVER2	NAT2
+     [java] Link55	WEB_SERVER2	NAT6
+     [java] Link18	WEB_SERVER2	VPN3
+     [java] Link90	WEB_SERVER2	VPN5
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER1	Type: WEB_SERVER	Number of links: 3
+     [java] List of Links for node WEB_SERVER1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link16	WEB_SERVER1	VPN5
+     [java] Link69	WEB_SERVER1	NAT2
+     [java] Link95	WEB_SERVER1	NAT0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER0	Type: WEB_SERVER	Number of links: 4
+     [java] List of Links for node WEB_SERVER0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link48	WEB_SERVER0	CACHE4
+     [java] Link14	WEB_SERVER0	VPN5
+     [java] Link35	WEB_SERVER0	NAT6
+     [java] Link73	WEB_SERVER0	VPN3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER3	Type: MAIL_SERVER	Number of links: 2
+     [java] List of Links for node MAIL_SERVER3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link20	MAIL_SERVER3	CACHE4
+     [java] Link36	MAIL_SERVER3	VPN3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN5	Type: VPN	Number of links: 10
+     [java] List of Links for node VPN5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link34	VPN5	WEB_SERVER5
+     [java] Link33	VPN5	WEB_CLIENT5
+     [java] Link64	VPN5	WEB_SERVER2
+     [java] Link16	VPN5	WEB_SERVER1
+     [java] Link14	VPN5	WEB_SERVER0
+     [java] Link57	VPN5	CACHE4
+     [java] Link39	VPN5	WEB_CLIENT6
+     [java] Link96	VPN5	MAIL_SERVER3
+     [java] Link8	VPN5	WEB_CLIENT4
+     [java] Link82	VPN5	WEB_SERVER4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT0	Type: NAT	Number of links: 6
+     [java] List of Links for node NAT0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link10	NAT0	WEB_CLIENT5
+     [java] Link91	NAT0	WEB_CLIENT4
+     [java] Link6	NAT0	WEB_CLIENT3
+     [java] Link30	NAT0	WEB_SERVER5
+     [java] Link74	NAT0	VPN5
+     [java] Link61	NAT0	WEB_SERVER4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER7	Type: MAIL_SERVER	Number of links: 2
+     [java] List of Links for node MAIL_SERVER7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link42	MAIL_SERVER7	VPN3
+     [java] Link28	MAIL_SERVER7	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT6	Type: WEB_CLIENT	Number of links: 4
+     [java] List of Links for node WEB_CLIENT6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	WEB_CLIENT6	NAT6
+     [java] Link66	WEB_CLIENT6	CACHE4
+     [java] Link51	WEB_CLIENT6	FW1
+     [java] Link84	WEB_CLIENT6	VPN5
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER6	Type: WEB_SERVER	Number of links: 1
+     [java] List of Links for node WEB_SERVER6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link26	WEB_SERVER6	FW1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT5	Type: WEB_CLIENT	Number of links: 4
+     [java] List of Links for node WEB_CLIENT5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link77	WEB_CLIENT5	VPN3
+     [java] Link10	WEB_CLIENT5	NAT0
+     [java] Link75	WEB_CLIENT5	NAT2
+     [java] Link62	WEB_CLIENT5	CACHE4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT4	Type: WEB_CLIENT	Number of links: 2
+     [java] List of Links for node WEB_CLIENT4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link70	WEB_CLIENT4	CACHE4
+     [java] Link8	WEB_CLIENT4	VPN5
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT6	Type: NAT	Number of links: 6
+     [java] List of Links for node NAT6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	NAT6	WEB_CLIENT6
+     [java] Link45	NAT6	MAIL_CLIENT2
+     [java] Link22	NAT6	WEB_SERVER4
+     [java] Link49	NAT6	MAIL_SERVER3
+     [java] Link80	NAT6	VPN3
+     [java] Link52	NAT6	CACHE4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT3	Type: WEB_CLIENT	Number of links: 3
+     [java] List of Links for node WEB_CLIENT3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link53	WEB_CLIENT3	VPN5
+     [java] Link6	WEB_CLIENT3	NAT0
+     [java] Link63	WEB_CLIENT3	NAT6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT0	Type: MAIL_CLIENT	Number of links: 3
+     [java] List of Links for node MAIL_CLIENT0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link0	MAIL_CLIENT0	CACHE4
+     [java] Link40	MAIL_CLIENT0	FW1
+     [java] Link50	MAIL_CLIENT0	NAT6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT2	Type: NAT	Number of links: 7
+     [java] List of Links for node NAT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link88	NAT2	WEB_SERVER4
+     [java] Link32	NAT2	WEB_CLIENT5
+     [java] Link68	NAT2	WEB_SERVER5
+     [java] Link79	NAT2	WEB_SERVER2
+     [java] Link2	NAT2	MAIL_CLIENT1
+     [java] Link4	NAT2	MAIL_CLIENT2
+     [java] Link28	NAT2	MAIL_SERVER7
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT2	Type: MAIL_CLIENT	Number of links: 4
+     [java] List of Links for node MAIL_CLIENT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link31	MAIL_CLIENT2	NAT0
+     [java] Link58	MAIL_CLIENT2	CACHE4
+     [java] Link4	MAIL_CLIENT2	NAT2
+     [java] Link60	MAIL_CLIENT2	VPN5
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT1	Type: MAIL_CLIENT	Number of links: 2
+     [java] List of Links for node MAIL_CLIENT1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link59	MAIL_CLIENT1	NAT6
+     [java] Link2	MAIL_CLIENT1	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN3	Type: VPN	Number of links: 6
+     [java] List of Links for node VPN3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link54	VPN3	CACHE4
+     [java] Link65	VPN3	MAIL_SERVER3
+     [java] Link76	VPN3	WEB_SERVER5
+     [java] Link86	VPN3	VPN5
+     [java] Link46	VPN3	WEB_CLIENT3
+     [java] Link18	VPN3	WEB_SERVER2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE4	Type: CACHE	Number of links: 9
+     [java] List of Links for node CACHE4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link87	CACHE4	WEB_SERVER5
+     [java] Link20	CACHE4	MAIL_SERVER3
+     [java] Link37	CACHE4	MAIL_CLIENT2
+     [java] Link0	CACHE4	MAIL_CLIENT0
+     [java] Link47	CACHE4	VPN3
+     [java] Link92	CACHE4	MAIL_CLIENT1
+     [java] Link85	CACHE4	WEB_CLIENT6
+     [java] Link71	CACHE4	NAT6
+     [java] Link93	CACHE4	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] #
+     [java] 
+     [java] Data for NFFG Nffg1
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] 
+     [java] Update time: 27/09/2016 12:43
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Number of Nodes: 22
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER5	Type: WEB_SERVER	Number of links: 1
+     [java] List of Links for node WEB_SERVER5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link26	WEB_SERVER5	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER2	Type: WEB_SERVER	Number of links: 1
+     [java] List of Links for node WEB_SERVER2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link20	WEB_SERVER2	SPAM2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER0	Type: MAIL_SERVER	Number of links: 1
+     [java] List of Links for node MAIL_SERVER0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link16	MAIL_SERVER0	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER1	Type: WEB_SERVER	Number of links: 2
+     [java] List of Links for node WEB_SERVER1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link18	WEB_SERVER1	NAT3
+     [java] Link39	WEB_SERVER1	CACHE1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE1	Type: CACHE	Number of links: 7
+     [java] List of Links for node CACHE1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link55	CACHE1	WEB_SERVER5
+     [java] Link66	CACHE1	NAT3
+     [java] Link65	CACHE1	MAIL_SERVER7
+     [java] Link37	CACHE1	WEB_SERVER2
+     [java] Link48	CACHE1	MAIL_CLIENT6
+     [java] Link0	CACHE1	WEB_CLIENT0
+     [java] Link40	CACHE1	WEB_SERVER6
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT4	Type: MAIL_CLIENT	Number of links: 1
+     [java] List of Links for node MAIL_CLIENT4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link8	MAIL_CLIENT4	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER4	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link67	MAIL_SERVER4	SPAM2
+     [java] Link78	MAIL_SERVER4	SPAM0
+     [java] Link24	MAIL_SERVER4	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT3	Type: MAIL_CLIENT	Number of links: 3
+     [java] List of Links for node MAIL_CLIENT3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link75	MAIL_CLIENT3	NAT3
+     [java] Link49	MAIL_CLIENT3	SPAM2
+     [java] Link6	MAIL_CLIENT3	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER3	Type: MAIL_SERVER	Number of links: 1
+     [java] List of Links for node MAIL_SERVER3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link22	MAIL_SERVER3	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT6	Type: MAIL_CLIENT	Number of links: 2
+     [java] List of Links for node MAIL_CLIENT6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	MAIL_CLIENT6	NAT3
+     [java] Link54	MAIL_CLIENT6	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT5	Type: MAIL_CLIENT	Number of links: 2
+     [java] List of Links for node MAIL_CLIENT5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link10	MAIL_CLIENT5	NAT3
+     [java] Link61	MAIL_CLIENT5	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER8	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER8
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link32	MAIL_SERVER8	NAT3
+     [java] Link53	MAIL_SERVER8	SPAM2
+     [java] Link41	MAIL_SERVER8	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER7	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link56	MAIL_SERVER7	SPAM0
+     [java] Link69	MAIL_SERVER7	NAT3
+     [java] Link30	MAIL_SERVER7	SPAM2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT7	Type: WEB_CLIENT	Number of links: 3
+     [java] List of Links for node WEB_CLIENT7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link43	WEB_CLIENT7	SPAM2
+     [java] Link14	WEB_CLIENT7	SPAM0
+     [java] Link73	WEB_CLIENT7	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_SERVER6	Type: WEB_SERVER	Number of links: 1
+     [java] List of Links for node WEB_SERVER6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link28	WEB_SERVER6	SPAM2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER9	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER9
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link34	MAIL_SERVER9	SPAM0
+     [java] Link64	MAIL_SERVER9	NAT3
+     [java] Link63	MAIL_SERVER9	SPAM2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM0	Type: SPAM	Number of links: 10
+     [java] List of Links for node SPAM0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link34	SPAM0	MAIL_SERVER9
+     [java] Link38	SPAM0	MAIL_SERVER0
+     [java] Link26	SPAM0	WEB_SERVER5
+     [java] Link14	SPAM0	WEB_CLIENT7
+     [java] Link70	SPAM0	WEB_SERVER1
+     [java] Link80	SPAM0	WEB_CLIENT0
+     [java] Link4	SPAM0	WEB_CLIENT2
+     [java] Link6	SPAM0	MAIL_CLIENT3
+     [java] Link62	SPAM0	MAIL_CLIENT5
+     [java] Link71	SPAM0	MAIL_SERVER4
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT2	Type: WEB_CLIENT	Number of links: 2
+     [java] List of Links for node WEB_CLIENT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link79	WEB_CLIENT2	SPAM2
+     [java] Link4	WEB_CLIENT2	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT1	Type: WEB_CLIENT	Number of links: 2
+     [java] List of Links for node WEB_CLIENT1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link76	WEB_CLIENT1	SPAM0
+     [java] Link2	WEB_CLIENT1	SPAM2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node WEB_CLIENT0	Type: WEB_CLIENT	Number of links: 3
+     [java] List of Links for node WEB_CLIENT0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link44	WEB_CLIENT0	SPAM2
+     [java] Link0	WEB_CLIENT0	CACHE1
+     [java] Link58	WEB_CLIENT0	SPAM0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT3	Type: NAT	Number of links: 12
+     [java] List of Links for node NAT3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	NAT3	MAIL_CLIENT6
+     [java] Link45	NAT3	MAIL_SERVER9
+     [java] Link22	NAT3	MAIL_SERVER3
+     [java] Link10	NAT3	MAIL_CLIENT5
+     [java] Link32	NAT3	MAIL_SERVER8
+     [java] Link16	NAT3	MAIL_SERVER0
+     [java] Link47	NAT3	MAIL_CLIENT3
+     [java] Link24	NAT3	MAIL_SERVER4
+     [java] Link18	NAT3	WEB_SERVER1
+     [java] Link74	NAT3	SPAM2
+     [java] Link8	NAT3	MAIL_CLIENT4
+     [java] Link60	NAT3	WEB_CLIENT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM2	Type: SPAM	Number of links: 16
+     [java] List of Links for node SPAM2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link28	SPAM2	WEB_SERVER6
+     [java] Link77	SPAM2	MAIL_SERVER9
+     [java] Link20	SPAM2	WEB_SERVER2
+     [java] Link42	SPAM2	MAIL_SERVER3
+     [java] Link59	SPAM2	MAIL_SERVER4
+     [java] Link36	SPAM2	MAIL_CLIENT3
+     [java] Link46	SPAM2	WEB_SERVER1
+     [java] Link57	SPAM2	SPAM0
+     [java] Link68	SPAM2	WEB_CLIENT0
+     [java] Link2	SPAM2	WEB_CLIENT1
+     [java] Link81	SPAM2	MAIL_CLIENT6
+     [java] Link30	SPAM2	MAIL_SERVER7
+     [java] Link52	SPAM2	MAIL_CLIENT4
+     [java] Link51	SPAM2	WEB_CLIENT7
+     [java] Link50	SPAM2	WEB_CLIENT2
+     [java] Link72	SPAM2	NAT3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] #
+     [java] 
+     [java] Data for NFFG Nffg0
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] 
+     [java] Update time: 27/09/2016 10:55
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Number of Nodes: 19
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM10	Type: SPAM	Number of links: 6
+     [java] List of Links for node SPAM10
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link12	SPAM10	DPI4
+     [java] Link55	SPAM10	SPAM13
+     [java] Link64	SPAM10	NAT6
+     [java] Link49	SPAM10	NAT8
+     [java] Link26	SPAM10	DPI15
+     [java] Link13	SPAM10	DPI0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI15	Type: DPI	Number of links: 5
+     [java] List of Links for node DPI15
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link21	DPI15	MAIL_SERVER0
+     [java] Link43	DPI15	CACHE9
+     [java] Link48	DPI15	NAT6
+     [java] Link47	DPI15	VPN14
+     [java] Link19	DPI15	DPI11
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM13	Type: SPAM	Number of links: 1
+     [java] List of Links for node SPAM13
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link41	SPAM13	DPI15
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_SERVER0	Type: MAIL_SERVER	Number of links: 3
+     [java] List of Links for node MAIL_SERVER0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link36	MAIL_SERVER0	SPAM10
+     [java] Link2	MAIL_SERVER0	CACHE7
+     [java] Link4	MAIL_SERVER0	NAT16
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN5	Type: VPN	Number of links: 4
+     [java] List of Links for node VPN5
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link37	VPN5	CACHE7
+     [java] Link5	VPN5	NAT2
+     [java] Link6	VPN5	DPI11
+     [java] Link50	VPN5	SPAM3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT16	Type: NAT	Number of links: 3
+     [java] List of Links for node NAT16
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link53	NAT16	VPN14
+     [java] Link15	NAT16	SPAM1
+     [java] Link63	NAT16	MAIL_SERVER0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT6	Type: NAT	Number of links: 4
+     [java] List of Links for node NAT6
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link34	NAT6	SPAM13
+     [java] Link30	NAT6	NAT16
+     [java] Link52	NAT6	CACHE7
+     [java] Link9	NAT6	MAIL_CLIENT0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI0	Type: DPI	Number of links: 1
+     [java] List of Links for node DPI0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link59	DPI0	DPI12
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT8	Type: NAT	Number of links: 3
+     [java] List of Links for node NAT8
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link56	NAT8	DPI4
+     [java] Link10	NAT8	VPN5
+     [java] Link24	NAT8	MAIL_CLIENT0
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node MAIL_CLIENT0	Type: MAIL_CLIENT	Number of links: 5
+     [java] List of Links for node MAIL_CLIENT0
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link23	MAIL_CLIENT0	NAT6
+     [java] Link22	MAIL_CLIENT0	SPAM13
+     [java] Link0	MAIL_CLIENT0	DPI11
+     [java] Link58	MAIL_CLIENT0	CACHE7
+     [java] Link17	MAIL_CLIENT0	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node NAT2	Type: NAT	Number of links: 6
+     [java] List of Links for node NAT2
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link27	NAT2	MAIL_CLIENT0
+     [java] Link14	NAT2	SPAM10
+     [java] Link35	NAT2	DPI12
+     [java] Link39	NAT2	NAT6
+     [java] Link62	NAT2	CACHE7
+     [java] Link8	NAT2	SPAM1
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node VPN14	Type: VPN	Number of links: 1
+     [java] List of Links for node VPN14
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link7	VPN14	DPI11
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI4	Type: DPI	Number of links: 3
+     [java] List of Links for node DPI4
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link54	DPI4	SPAM3
+     [java] Link38	DPI4	SPAM1
+     [java] Link18	DPI4	DPI15
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM3	Type: SPAM	Number of links: 2
+     [java] List of Links for node SPAM3
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link45	SPAM3	MAIL_CLIENT0
+     [java] Link28	SPAM3	DPI12
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE7	Type: CACHE	Number of links: 3
+     [java] List of Links for node CACHE7
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link11	CACHE7	DPI4
+     [java] Link2	CACHE7	MAIL_SERVER0
+     [java] Link29	CACHE7	NAT2
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI12	Type: DPI	Number of links: 4
+     [java] List of Links for node DPI12
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link33	DPI12	NAT6
+     [java] Link32	DPI12	DPI15
+     [java] Link31	DPI12	SPAM10
+     [java] Link40	DPI12	SPAM13
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node SPAM1	Type: SPAM	Number of links: 2
+     [java] List of Links for node SPAM1
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link44	SPAM1	NAT16
+     [java] Link51	SPAM1	DPI15
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node DPI11	Type: DPI	Number of links: 7
+     [java] List of Links for node DPI11
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link20	DPI11	VPN5
+     [java] Link42	DPI11	DPI4
+     [java] Link0	DPI11	MAIL_CLIENT0
+     [java] Link25	DPI11	SPAM13
+     [java] Link57	DPI11	VPN14
+     [java] Link61	DPI11	NAT6
+     [java] Link60	DPI11	SPAM10
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] Node CACHE9	Type: CACHE	Number of links: 2
+     [java] List of Links for node CACHE9
+     [java] Link name 	source 	destination
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Link16	CACHE9	CACHE7
+     [java] Link46	CACHE9	SPAM3
+     [java] %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     [java] #
+     [java] #End of Nodes
+     [java] #
+     [java] #
+     [java] #Number of Policies: 124
+     [java] #
+     [java] #List of policies:
+     [java] ------------------------------------------------------------------------------------------------------------------------------------
+     [java] Policy name: Policy56
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 12:14
+     [java] #
+     [java] Policy name: Policy55
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 01:04
+     [java] #
+     [java] Policy name: Policy54
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 03:51
+     [java] #
+     [java] Policy name: Policy53
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 04:12
+     [java] #
+     [java] Policy name: Policy59
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy58
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy57
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy52
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy51
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 11:28
+     [java] #
+     [java] Policy name: Policy50
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 02:19
+     [java] #
+     [java] Policy name: Policy45
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 12:09
+     [java] #
+     [java] Policy name: Policy44
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 01:57
+     [java] #
+     [java] Policy name: Policy43
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy42
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy49
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 04:11
+     [java] #
+     [java] Policy name: Policy48
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 08:48
+     [java] #
+     [java] Policy name: Policy47
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 04:47
+     [java] #
+     [java] Policy name: Policy46
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 01:32
+     [java] #
+     [java] Policy name: Policy41
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 02:02
+     [java] #
+     [java] Policy name: Policy40
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy34
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy33
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 03:27
+     [java] #
+     [java] Policy name: Policy32
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 11:40
+     [java] #
+     [java] Policy name: Policy31
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 04:23
+     [java] #
+     [java] Policy name: Policy38
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy37
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy36
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy35
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy39
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 05:42
+     [java] #
+     [java] Policy name: Policy9
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy8
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 03:59
+     [java] #
+     [java] Policy name: Policy7
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 05:21
+     [java] #
+     [java] Policy name: Policy6
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy5
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy30
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy4
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy123
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy3
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy2
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy1
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy23
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy120
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 12:53
+     [java] #
+     [java] Policy name: Policy0
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 09:36
+     [java] #
+     [java] Policy name: Policy22
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 05:17
+     [java] #
+     [java] Policy name: Policy21
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 12:13
+     [java] #
+     [java] Policy name: Policy122
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy20
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 10:31
+     [java] #
+     [java] Policy name: Policy121
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy27
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 11:29
+     [java] #
+     [java] Policy name: Policy26
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 08:43
+     [java] #
+     [java] Policy name: Policy25
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 02:57
+     [java] #
+     [java] Policy name: Policy24
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 01:00
+     [java] #
+     [java] Policy name: Policy29
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy28
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 10:33
+     [java] #
+     [java] Policy name: Policy117
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 12:46
+     [java] #
+     [java] Policy name: Policy116
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy119
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy118
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy113
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy112
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy115
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy114
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy12
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 07:58
+     [java] #
+     [java] Policy name: Policy11
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy99
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy10
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy98
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy111
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 05:56
+     [java] #
+     [java] Policy name: Policy97
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 09:33
+     [java] #
+     [java] Policy name: Policy110
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 03:59
+     [java] #
+     [java] Policy name: Policy16
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy15
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy14
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy13
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy19
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 06:55
+     [java] #
+     [java] Policy name: Policy18
+     [java] Policy nffg name: Nffg1
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy17
+     [java] Policy nffg name: Nffg1
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy109
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy92
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy106
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 03:53
+     [java] #
+     [java] Policy name: Policy91
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 06:50
+     [java] #
+     [java] Policy name: Policy105
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy90
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy108
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 08:16
+     [java] #
+     [java] Policy name: Policy107
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 07:02
+     [java] #
+     [java] Policy name: Policy96
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy102
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 03:35
+     [java] #
+     [java] Policy name: Policy95
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy101
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 01:33
+     [java] #
+     [java] Policy name: Policy94
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 11:21
+     [java] #
+     [java] Policy name: Policy104
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 12:18
+     [java] #
+     [java] Policy name: Policy93
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 06:38
+     [java] #
+     [java] Policy name: Policy103
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy89
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy88
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 05:53
+     [java] #
+     [java] Policy name: Policy87
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 10:40
+     [java] #
+     [java] Policy name: Policy100
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy86
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy81
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 08:59
+     [java] #
+     [java] Policy name: Policy80
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 12:38
+     [java] #
+     [java] Policy name: Policy85
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy84
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 06:17
+     [java] #
+     [java] Policy name: Policy83
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy82
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 08:06
+     [java] #
+     [java] Policy name: Policy78
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy77
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 12:56
+     [java] #
+     [java] Policy name: Policy76
+     [java] Policy nffg name: Nffg3
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 07:31
+     [java] #
+     [java] Policy name: Policy75
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy79
+     [java] Policy nffg name: Nffg3
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy70
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 08:55
+     [java] #
+     [java] Policy name: Policy74
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 11:41
+     [java] #
+     [java] Policy name: Policy73
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 12:50
+     [java] #
+     [java] Policy name: Policy72
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy71
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 02:51
+     [java] #
+     [java] Policy name: Policy67
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy66
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 09:30
+     [java] #
+     [java] Policy name: Policy65
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 26/09/2016 09:05
+     [java] #
+     [java] Policy name: Policy64
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy69
+     [java] Policy nffg name: Nffg2
+     [java] Policy is negative.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy68
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 07:13
+     [java] #
+     [java] Policy name: Policy63
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 27/09/2016 07:06
+     [java] #
+     [java] Policy name: Policy62
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] No verification result for policy
+     [java] #
+     [java] Policy name: Policy61
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is false
+     [java] Verification result message: Policy verification result not true
+     [java] Verification time (in local time zone): 27/09/2016 04:17
+     [java] #
+     [java] Policy name: Policy60
+     [java] Policy nffg name: Nffg2
+     [java] Policy is positive.
+     [java] Policy result is true
+     [java] Verification result message: Policy verificarion result true
+     [java] Verification time (in local time zone): 26/09/2016 11:16
+     [java] #
+     [java] #End of Policies
+     [java] #
+
+BUILD SUCCESSFUL
+Total time: 0 seconds

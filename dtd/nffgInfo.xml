@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE nffgs SYSTEM "nffgInfo.dtd">
+<nffgs>
+	<nffg name="nffg1" update_time="2015-07-21T21:00:00.000+02:00">
+		<node name="node11" functional_type="FW"  />
+		<node name="node12" functional_type="DPI"  />
+		<node name="node13" functional_type="SPAM"  />
+
+		<link name="link12" src="node11" dst="node12" />
+		
+		
+		<policy name="policy11" positivity="true"
+			src="node11" dst="node12">
+			<verification 
+						satisfied="true" 
+						message="no messages for this policy"
+						verification_time="2015-07-21T21:00:00.000+02:00"
+			/>
+			
+		</policy>
+	
+		<policy 
+			name="policy12" 
+			positivity="true"
+			src="node11"
+			dst="node12"
+		>
+			<traversal>
+				<functionality name="FW" />
+				<functionality name="NAT" />
+			</traversal>
+			
+			<verification
+				satisfied="true" message="no messages for this policy"
+				verification_time="2015-07-21T22:00:00.000+02:00"
+			/>
+		</policy>
+
+
+	</nffg>
+	
+	<nffg name="nffg2" update_time="2015-07-21T21:00:00.000+02:00">
+		<node name="node11B" functional_type="FW"  />
+		<node name="node12B" functional_type="DPI"  />
+		<node name="node13B" functional_type="SPAM"  />
+
+		<link name="link12B" src="node11B" dst="node12B" />
+		
+		
+		<policy name="policy11B" positivity="true"
+			src="node11B" dst="node12B">
+			<verification 
+						satisfied="false" 
+						message="Failed verification"
+						verification_time="2015-07-21T22:00:00.000+02:00"
+			/>
+			
+		</policy>
+	
+		<policy 
+			name="policy12B" 
+			positivity="true"
+			src="node11B"
+			dst="node12B"
+		>
+			<traversal>
+				<functionality name="DPI" />
+			</traversal>
+			
+		</policy>
+	</nffg>
+</nffgs>
+

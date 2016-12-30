@@ -1,0 +1,20 @@
+Macagno Michele 231705
+DTD
+
+root element: nffgs.At least an nffg nested element is required. 
+An nffg is described by name, update_time as attributes. The nodes (src/dst and others), 
+the set of links and the policies are required as nested elements. 
+Policies are not mandatory in the nffg.
+Every node is described by two attributes, the name and the functional type, both of them are mandatory #REQUIRED.
+Links are described by mandatory attributes for name,source and destination. 
+A policy is by default a reachability one. Name,src,dst and positivity (only true false possible values) are mandatory attributes. 
+A traversal policy has a nested element <traversal> adding information regarding the requested functionalities.
+The set of available functionalities are listed in the ATTLIST of Functionality element. 
+ 
+Elements that must be unique in the document are defined with ID, attributes that must be related
+to these unique values are defined with the IDREF (meaning the content must be equal to an already defined ID)
+ 
+Limits of DTD:
+IDREF attributes are not connected to the correct element, i.e. it can refer to every ID in the xml document,
+not only the type of element you should enforce. 
+

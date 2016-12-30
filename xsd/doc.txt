@@ -1,0 +1,41 @@
+Macagno Michele 231705
+XML SCHEMA xsd Description
+
+For the xsd schema, I decided to use only elements (not attributes). This is a syntax choice encouraged
+by the w3schools.com hints about xml language.
+
+The root element is nffgs, this element contains all the nffg elements,
+it is used only as container for these elements.
+
+nffgs is defined as complex type having minOccurs=1 for the nffg elemetns; in this 
+way a document without nffg elements is not validated, and the program does not read it.
+(Solution avoiding a lot of possible NullPointerExceptions)
+
+nffgs tag also enforce the uniqueness, inside the document, of the nffg name. 
+
+The uniqueness of the policy name and link name is enforced. Inside the same nffg we can't have nodes or links or policies
+with the same name, (enforced by <xsd:key name="link_name"> and <xsd:key name="node_name"> and <xsd:key name="unique_policy"> 
+and 	<xsd:key name="unique_policy">)
+
+
+I used keyref in order to obtain references to nodes name. This is useful,
+for example, when I need to refer from source/destination node tags to the name of the node.
+I inserted the keyref element in order to enforce the domain of the references,
+i.e. a Policy/Link inside an nffg can refer only to nodes belonging to that nffg.
+
+
+I declared all types (complex and simple types) at the end of the
+xsd file. Then I called the newly created type directly from the <xsd:element> tags.
+(With the exception of the nffgs complex type - that is declared nested ),
+
+Every nffg has at least 2 nodes (source/destination), at least a link, but the presence of policies is not enforced (minOccurs=0). All these
+parameters are described with the minOccurs and maxOccurs properties.
+
+Every Policy is by default a reachability policy. A traversal policy has an additional element (<traversal> with minOccurs=0), describing
+this is a traversal policy and enforcing the presence of at least one functionality to be traversed (minOccurs=1).
+
+To enforce constraints on number of elements I used minOccurs and maxOccurs.
+
+Name fields are described by a regular expression,to enforce the specifications of the javadoc documentation.
+
+
