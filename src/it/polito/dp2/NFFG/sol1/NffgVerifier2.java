@@ -69,7 +69,7 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 	public Set<PolicyReader> getPolicies(String arg0) {
 		Set<PolicyReader> toReturn = 
 				setPolicyReader2.stream().filter(p->{
-			return(	p.getName().equals(arg0) );
+			return(	p.getNffg().getName().equals(arg0) );
 		}).collect(Collectors.toSet());
 		
 		//in case nothing found, return null - by definition
