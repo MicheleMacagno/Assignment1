@@ -1,51 +1,53 @@
 <?xml version="1.0"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/nffgInfo" 
+	xmlns:tns="http://www.example.org/nffgInfo" 
+
+	elementFormDefault="qualified">
+	
 	<xsd:element name="nffgs">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="nffg" type="Nffg" maxOccurs="unbounded">
+				<xsd:element name="nffg" type="tns:Nffg" maxOccurs="unbounded">
 
 					<xsd:key name="node_name">
-						<xsd:selector xpath="node" />
-						<xsd:field xpath="name" />
+						<xsd:selector xpath="tns:node" />
+						<xsd:field xpath="tns:name" />
 					</xsd:key>
 
 
 					<!-- enforce uniqueness of link names inside a nffg -->
 					<xsd:key name="link_name">
-						<xsd:selector xpath="link" />
-						<xsd:field xpath="name" />
+						<xsd:selector xpath="tns:link" />
+						<xsd:field xpath="tns:name" />
 					</xsd:key>
 
 
 					<!-- node references for links -->
-					<xsd:keyref name="ref_link_src_node" refer="node_name">
-						<xsd:selector xpath="link" />
-						<xsd:field xpath="src" />
+					<xsd:keyref name="ref_link_src_node" refer="tns:node_name">
+						<xsd:selector xpath="tns:link" />
+						<xsd:field xpath="tns:src" />
 					</xsd:keyref>
 
-					<xsd:keyref name="ref_link_dst_node" refer="node_name">
-						<xsd:selector xpath="link" />
-						<xsd:field xpath="dst" />
+					<xsd:keyref name="ref_link_dst_node" refer="tns:node_name">
+						<xsd:selector xpath="tns:link" />
+						<xsd:field xpath="tns:dst" />
 					</xsd:keyref>
-					<!-- uniqueness of name of the policy inside the nffg -->
-					<xsd:key name="unique_policy">
-						<xsd:selector xpath="policy"></xsd:selector>
-						<xsd:field xpath="name" />
-					</xsd:key>
+					
 
 					<!-- enforce the src of the policy to be linked to a node name of the 
 						nffg -->
-					<xsd:keyref name="ref_policy_src_node" refer="node_name">
-						<xsd:selector xpath="policy" />
-						<xsd:field xpath="src" />
+					<xsd:keyref name="ref_policy_src_node" refer="tns:node_name">
+						<xsd:selector xpath="tns:policy" />
+						<xsd:field xpath="tns:src" />
 					</xsd:keyref>
 
 					<!-- enforce the dst of the policy to be linked to a node name of the 
 						nffg -->
-					<xsd:keyref name="ref_policy_dst_node" refer="node_name">
-						<xsd:selector xpath="policy" />
-						<xsd:field xpath="dst" />
+					<xsd:keyref name="ref_policy_dst_node" refer="tns:node_name">
+						<xsd:selector xpath="tns:policy" />
+						<xsd:field xpath="tns:dst" />
 					</xsd:keyref>
 				</xsd:element>
 			</xsd:sequence>
@@ -53,8 +55,14 @@
 
 		<!-- Uniqueness of nffg name -->
 		<xsd:key name="nffg_name">
-			<xsd:selector xpath="nffg" />
-			<xsd:field xpath="name" />
+			<xsd:selector xpath="tns:nffg" />
+			<xsd:field xpath="tns:name" />
+		</xsd:key>
+		
+		<!-- uniqueness of name of the policy -->
+		<xsd:key name="unique_policy">
+			<xsd:selector xpath="tns:nffg/tns:policy"></xsd:selector>
+			<xsd:field xpath="tns:name" />
 		</xsd:key>
 
 	</xsd:element>
@@ -66,14 +74,11 @@
 	<xsd:complexType name="Nffg">
 
 		<xsd:sequence>
-			<xsd:element name="name" type="NameType" />
+			<xsd:element name="name" type="tns:NameType" />
 			<xsd:element name="lastUpdate" type="xsd:dateTime" />
-			<xsd:element name="node" minOccurs="2" maxOccurs="unbounded"
-				type="Node" />
-			<xsd:element name="link" minOccurs="1" maxOccurs="unbounded"
-				type="Link" />
-			<xsd:element name="policy" minOccurs="0" maxOccurs="unbounded"
-				type="Policy" />
+			<xsd:element name="node" minOccurs="2" maxOccurs="unbounded" type="tns:Node" />
+			<xsd:element name="link" minOccurs="1" maxOccurs="unbounded" type="tns:Link" />
+			<xsd:element name="policy" minOccurs="0" maxOccurs="unbounded" type="tns:Policy" />
 		</xsd:sequence>
 
 
@@ -82,8 +87,8 @@
 	<!-- Node declaration -->
 	<xsd:complexType name="Node">
 		<xsd:sequence>
-			<xsd:element name="name" type="NameType" />
-			<xsd:element name="functionality" type="Functionality" />
+			<xsd:element name="name" type="tns:NameType" />
+			<xsd:element name="functionality" type="tns:Functionality" />
 		</xsd:sequence>
 
 	</xsd:complexType>
@@ -107,27 +112,27 @@
 	<!-- Node declaration -->
 	<xsd:complexType name="Link">
 		<xsd:sequence>
-			<xsd:element name="name" type="NameType" />
-			<xsd:element name="src" type="NameType" />
-			<xsd:element name="dst" type="NameType" />
+			<xsd:element name="name" type="tns:NameType" />
+			<xsd:element name="src" type="tns:NameType" />
+			<xsd:element name="dst" type="tns:NameType" />
 		</xsd:sequence>
 	</xsd:complexType>
 
 	<!-- policy declaration -->
 	<xsd:complexType name="Policy">
 		<xsd:sequence>
-			<xsd:element name="name" type="NameType" />
+			<xsd:element name="name" type="tns:NameType" />
 
 			<!--imposed the result not mandatory, can be computed, right? -->
 			<xsd:element name="positivity" type="xsd:boolean" />
-			<xsd:element name="src" type="NameType" />
-			<xsd:element name="dst" type="NameType" />
-			<xsd:element minOccurs="0" maxOccurs="1" name="traversal" type="Traversal" />
+			<xsd:element name="src" type="tns:NameType" />
+			<xsd:element name="dst" type="tns:NameType" />
+			<xsd:element minOccurs="0" maxOccurs="1" name="traversal" type="tns:Traversal" />
 
 			<!-- The element of the verification, include the result of verification, 
 				the date/time and a message with further information -->
 
-			<xsd:element name="verification" type="Verification"
+			<xsd:element name="verification" type="tns:Verification"
 				minOccurs="0" maxOccurs="1" />
 
 		</xsd:sequence>
@@ -138,7 +143,7 @@
 	<!-- Traversal policy type definition as extension of reachability property -->
 	<xsd:complexType name="Traversal">
 				<xsd:sequence>
-					<xsd:element name="functionality" type="Functionality"
+					<xsd:element name="functionality" type="tns:Functionality"
 						minOccurs="1" maxOccurs="unbounded" />
 				</xsd:sequence>
 	</xsd:complexType>

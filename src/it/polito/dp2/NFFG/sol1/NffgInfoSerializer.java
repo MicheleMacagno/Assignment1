@@ -271,6 +271,10 @@ public class NffgInfoSerializer {
 			jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 			//Validation of the schema - from JAXB-unmarshal-validate
 			jaxbMarshaller.setSchema(sf.newSchema(new File("xsd/nffgInfo.xsd")));
+			
+			//set the schema location in the generated xml
+			jaxbMarshaller.setProperty(Marshaller.JAXB_SCHEMA_LOCATION, "http://www.example.org/nffgInfo nffgInfo.xsd");
+
 			jaxbMarshaller.marshal(this.nffgs, file);
 			
 			System.out.println("XML file correctly written in " + filename);
