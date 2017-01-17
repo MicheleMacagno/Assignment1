@@ -1,137 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tns:nffgs 
-	xmlns:tns="http://www.example.org/nffgInfo" 
+<nffgs 
+	xmlns="http://www.example.org/nffgInfo" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://www.example.org/nffgInfo nffgInfo.xsd ">
 
 
-	<tns:nffg>
-		<tns:name>nffg1</tns:name>
-		<tns:lastUpdate>2015-07-21T21:00:00.000+02:00</tns:lastUpdate>
+	<nffg>
+		<name>nffg1</name>
+		<lastUpdate>2015-07-21T21:00:00.000+02:00</lastUpdate>
 
-		<tns:node>
-			<tns:name>nodo1</tns:name>
-			<tns:functionality>FW</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo1</name>
+			<functionality>FW</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo2</tns:name>
-			<tns:functionality>NAT</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo2</name>
+			<functionality>NAT</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo3</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo3</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo4</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo4</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo5</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo5</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:link>
-			<tns:name>link1</tns:name>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo4</tns:dst>
-		</tns:link>
+		<link>
+			<name>link1</name>
+			<src>nodo1</src>
+			<dst>nodo4</dst>
+		</link>
 
-		<tns:link>
-			<tns:name>link2</tns:name>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo2</tns:dst>
-		</tns:link>
+		<link>
+			<name>link2</name>
+			<src>nodo1</src>
+			<dst>nodo2</dst>
+		</link>
 
-		<tns:policy>
-			<tns:name>policy1</tns:name>
-			<tns:positivity>true</tns:positivity>
-			<tns:src>nodo4</tns:src>
-			<tns:dst>nodo1</tns:dst>
-			<tns:verification>
-				<tns:verificationTime>2016-07-21T21:00:00.000+02:00</tns:verificationTime>
-				<tns:result>true</tns:result>
-				<tns:message>This policy is Verified</tns:message>
-			</tns:verification>
-		</tns:policy>
+		<policy>
+			<name>policy1</name>
+			<positivity>true</positivity>
+			<src>nodo4</src>
+			<dst>nodo1</dst>
+			<verification>
+				<verificationTime>2016-07-21T21:00:00.000+02:00</verificationTime>
+				<result>true</result>
+				<message>This policy is Verified</message>
+			</verification>
+		</policy>
 		
-		<tns:policy>
-			<tns:name>policy2</tns:name>
-			<tns:positivity>true</tns:positivity>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo3</tns:dst>
-			<tns:traversal>
-				<tns:functionality>DPI</tns:functionality>
-			</tns:traversal>
-		</tns:policy>
+		<policy>
+			<name>policy2</name>
+			<positivity>true</positivity>
+			<src>nodo1</src>
+			<dst>nodo3</dst>
+			<traversal>
+				<functionality>DPI</functionality>
+			</traversal>
+		</policy>
 
-	</tns:nffg>
+	</nffg>
 
-	<tns:nffg>
-		<tns:name>nffg2</tns:name>
-		<tns:lastUpdate>2015-07-21T21:00:00.000+02:00</tns:lastUpdate>
+	<nffg>
+		<name>nffg2</name>
+		<lastUpdate>2015-07-21T21:00:00.000+02:00</lastUpdate>
 
-		<tns:node>
-			<tns:name>nodo1</tns:name>
-			<tns:functionality>FW</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo1</name>
+			<functionality>FW</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo2</tns:name>
-			<tns:functionality>NAT</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo2</name>
+			<functionality>NAT</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo3</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo3</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo4</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo4</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:node>
-			<tns:name>nodo5</tns:name>
-			<tns:functionality>DPI</tns:functionality>
-		</tns:node>
+		<node>
+			<name>nodo5</name>
+			<functionality>DPI</functionality>
+		</node>
 
-		<tns:link>
-			<tns:name>link1</tns:name>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo4</tns:dst>
-		</tns:link>
+		<link>
+			<name>link1</name>
+			<src>nodo1</src>
+			<dst>nodo4</dst>
+		</link>
 
-		<tns:link>
-			<tns:name>link2</tns:name>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo2</tns:dst>
-		</tns:link>
+		<link>
+			<name>link2</name>
+			<src>nodo1</src>
+			<dst>nodo2</dst>
+		</link>
 
-		<tns:policy>
-			<tns:name>policy3</tns:name>
-			<tns:positivity>true</tns:positivity>
-			<tns:src>nodo4</tns:src>
-			<tns:dst>nodo1</tns:dst>
-			<tns:verification>
-				<tns:verificationTime>2016-07-21T21:00:00.000+02:00</tns:verificationTime>
-				<tns:result>true</tns:result>
-				<tns:message>This policy is Verified</tns:message>
-			</tns:verification>
-		</tns:policy>
+		<policy>
+			<name>policy3</name>
+			<positivity>true</positivity>
+			<src>nodo4</src>
+			<dst>nodo1</dst>
+			<verification>
+				<verificationTime>2016-07-21T21:00:00.000+02:00</verificationTime>
+				<result>true</result>
+				<message>This policy is Verified</message>
+			</verification>
+		</policy>
 		
-		<tns:policy>
-			<tns:name>policy4</tns:name>
-			<tns:positivity>true</tns:positivity>
-			<tns:src>nodo1</tns:src>
-			<tns:dst>nodo3</tns:dst>
-			<tns:traversal>
-				<tns:functionality>DPI</tns:functionality>
-			</tns:traversal>
-		</tns:policy>
+		<policy>
+			<name>policy4</name>
+			<positivity>true</positivity>
+			<src>nodo1</src>
+			<dst>nodo3</dst>
+			<traversal>
+				<functionality>DPI</functionality>
+			</traversal>
+		</policy>
 
-	</tns:nffg>
-</tns:nffgs>
+	</nffg>
+</nffgs>
