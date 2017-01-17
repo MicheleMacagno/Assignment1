@@ -229,15 +229,14 @@ public class NffgInfoSerializer {
 			return;
 		}
 		
-		//System.setProperty("it.polito.dp2.NFFG.sol1.NffgInfo.file", args[0]);
-		//-------------------------------------
-		
-		
 		try {
 			wf = new NffgInfoSerializer();
 			wf.prepareToMarshal();
 			if(wf.nffgs!=null){
-				wf.printXML(args[0]);
+				if(!wf.printXML(args[0])){
+					System.out.println("Impossible to create the XML. Something was wrong while converting data for the XML document\n");
+					System.exit(-1);
+				}
 			}
 			else{
 				System.out.println("Impossible to create the XML. Something was wrong while converting data for the XML document\n");
@@ -245,15 +244,19 @@ public class NffgInfoSerializer {
 		} catch (NffgVerifierException e) {
 			System.err.println("Could not instantiate data generator.");
 			e.printStackTrace();
-			System.exit(1);
+			System.exit(-2);
 		}
 	}
 
-	/**
-	 * 
-	 * @param filename
-	 */
-    public void printXML(String filename){
+
+/**
+ * 
+ * @param filename
+ * @return
+ * 	true: if the file can be correctly validated against the schema
+ *  false: otherwise or in case of errors/exception
+ */
+    private Boolean printXML(String filename){
     	File file = null;
     	try{
     		file = new File(filename);
@@ -278,13 +281,17 @@ public class NffgInfoSerializer {
 			jaxbMarshaller.marshal(this.nffgs, file);
 			
 			System.out.println("XML file correctly written in " + filename);
+			return true;
 		
 		} catch (JAXBException e) {
 			e.printStackTrace();
+			return false;
 		} catch (SAXException e) {
 			e.printStackTrace();
+			return false;
 		} catch (Exception e){
 			e.printStackTrace();
+			return false;
 		}
 		
     }
@@ -300,7 +307,6 @@ public class NffgInfoSerializer {
 		
 		GregorianCalendar c = new GregorianCalendar();
 		c.setTime(calendarDate);
-//TODO ENABLE
 		c.setTimeZone(cal.getTimeZone());
 		XMLGregorianCalendar date2 = null;
 		try {
