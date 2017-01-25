@@ -26,9 +26,6 @@ public class NffgReader2 extends NamedEntityReader2 implements NffgReader {
 		List<Node> listn = nffg.getNode();
 		
 		//create the NodeReader2 for each node and add to the set
-		
-		
-		
 		setNodesReader2 = new LinkedHashSet<NodeReader>();
 		for(Node n : listn){
 			NodeReader nr = new NodeReader2(n);
@@ -36,21 +33,17 @@ public class NffgReader2 extends NamedEntityReader2 implements NffgReader {
 		}
 		
 		//for each node create the correspondant link
-		//filter the links having src or dst equal to the current node and save it to a list
+		//filter the links having src equal to the current node and save it to a list
 		//extract the correct node reader element and add the available links
-
-		
-		
-		
 		for(Node n : listn){
+			
+			//filter links having as source node the current node n
 			List<Link> lll = 
 					nffg.getLink().stream().filter( l ->{
-//FIX: Added only the link in which the source node is the correct node, or it corresponds to the destination and it is bidirectional 
-//						return(l.getSrc().equals(n.getName())  ||  ( l.getDst().equals(n.getName()) && l.isBidirectional()) ); 
 						return(l.getSrc().equals(n.getName()) ); 
 					}).collect(Collectors.toList());
 			
-			
+			//add the created link to the correspondant node reader they refer to
 			for(NodeReader nr : setNodesReader2){
 				if(nr.getName().equals(n.getName())){
 					((NodeReader2) nr).addLinks(setNodesReader2,lll,n);
@@ -62,9 +55,9 @@ public class NffgReader2 extends NamedEntityReader2 implements NffgReader {
 	
 
 	@Override
-	public NodeReader getNode(String arg0) {
+	public NodeReader getNode(String name) {
 		for(NodeReader nr2 : setNodesReader2){
-			if(nr2.getName().equals(arg0)){
+			if(nr2.getName().equals(name)){
 				return nr2;
 			}
 		}

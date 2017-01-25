@@ -1,20 +1,31 @@
-Macagno Michele 231705
-DTD
+Macagno Michele matr.231705
+
+ Assignment 1 - DTD documentation
+
 
 root element: nffgs.At least an nffg nested element is required. 
-An nffg is described by name, update_time as attributes. The nodes (src/dst and others), 
-the set of links and the policies are required as nested elements. 
+An nffg is described by name, lastUpdate as attributes. 
+The nodes must be at least 2. because it is the minimum number of nodes that allowing the creation of links, 
+The set of nodes, links and policies are required as nested elements. 
 Policies are not mandatory in the nffg.
-Every node is described by two attributes, the name and the functional type, both of them are mandatory #REQUIRED.
-Links are described by mandatory attributes for name,source and destination. 
-A policy is by default a reachability one. Name,src,dst and positivity (only true false possible values) are mandatory attributes. 
-A traversal policy has a nested element <traversal> adding information regarding the requested functionalities.
-The set of available functionalities are listed in the ATTLIST of Functionality element. 
+Every node is described by two attributes, the "name" (must be unique in the document- type ID) and the "functionality", both of them are mandatory #REQUIRED.
+functionality attribute can assume only a specified set of values (FW|DPI|NAT|SPAM|CACHE|VPN|WEB_SERVER|WEB_CLIENT|MAIL_SERVER|MAIL_CLIENT),
+defined in the declaration of the attribute.
+
+Links are described by mandatory attributes for name,source (src) and destination (dst). src and dst are defined as IDREF,
+they must assume as value, one of the ID defined in the document. Note that with DTD is not possible to enforce a strong constraint,
+i.e. src and dst can refer also to ID different from nodes identifier.
+
+A policy is, by default, a reachability one. Name,src,dst and positivity (can assume as values only true/false) are mandatory attributes (#REQUIRED). 
+A policy with nested element <traversal> is a traversal policy.
+Element traversal must have at least one nested element of type <functionality>, adding information regarding the requested functionalities.
+The set of available functionalities are identified by the attribute name of functionality element, that can assume the same values described before for functionalities. 
  
-Elements that must be unique in the document are defined with ID, attributes that must be related
-to these unique values are defined with the IDREF (meaning the content must be equal to an already defined ID)
+Attribute that must be unique in the document (to be used as identifier) are defined with ID.
+Attributes that must assume values equals to these identifier are defined with IDREF 
+(meaning the content must be equal to an already defined ID)
  
 Limits of DTD:
-IDREF attributes are not connected to the correct element, i.e. it can refer to every ID in the xml document,
-not only the type of element you should enforce. 
+IDREF attributes are not connected to the correct element, i.e. they can refer to every ID in the xml document,
+not only the type of element you should enforce. This constraints must be checked by the developer.
 

@@ -39,10 +39,9 @@ public class NodeReader2 extends NamedEntityReader2 implements NodeReader {
 		return links;
 	}
 	
-	/**
+	/*
 	 * This method receives the Nffg element and the set of NodeReader. This way, it adds
 	 * all the available links to the solution
-	 * @param snr
 	 */
 	protected void addLinks(Set<NodeReader> snr,List<Link> lll,Node n){
 		//for each link
@@ -68,7 +67,7 @@ public class NodeReader2 extends NamedEntityReader2 implements NodeReader {
 			//create the new LinkReader and add to solution
 			LinkReader2 lr2 = new LinkReader2(l.getName(),nodoSrc.get(0),nodoDst.get(0));
 			
-			//add only the links in which the name is correspon
+			//add only the links in which the name is corresponding
 			if(nodoSrc.get(0).getName().equals(n.getName())){
 				
 				

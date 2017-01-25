@@ -43,9 +43,9 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 	}
 	
 	@Override
-	public NffgReader getNffg(String arg0) {
+	public NffgReader getNffg(String name) {
 		for(NffgReader nr : setNffgReader2){
-			if(nr.getName().equals(arg0)){
+			if(nr.getName().equals(name)){
 				return nr;
 			}
 		}
@@ -66,10 +66,10 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 	}
 
 	@Override
-	public Set<PolicyReader> getPolicies(String arg0) {
+	public Set<PolicyReader> getPolicies(String namenffg) {
 		Set<PolicyReader> toReturn = 
 				setPolicyReader2.stream().filter(p->{
-			return(	p.getNffg().getName().equals(arg0) );
+			return(	p.getNffg().getName().equals(namenffg) );
 		}).collect(Collectors.toSet());
 		
 		//in case nothing found, return null - by definition
@@ -82,15 +82,15 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 	}
 
 	@Override
-	public Set<PolicyReader> getPolicies(Calendar arg0) {
+	public Set<PolicyReader> getPolicies(Calendar verificationtime) {
 		Set<PolicyReader> toReturn =
 				setPolicyReader2.stream().filter(p->{
 						//verify if verification data exists for the following policy
 						if(p.getResult()==null) {
 							return false;
 						}
-						//if exist, verify if the verification date is grater than the current one
-						return((p.getResult().getVerificationTime().compareTo(arg0))> 0 );
+						//if exist, verify if the verification date is greater than the current one
+						return((p.getResult().getVerificationTime().compareTo(verificationtime))> 0 );
 		}).collect(Collectors.toSet());
 		
 		//in case nothing found, return null - by definition
@@ -116,7 +116,6 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 				e.printStackTrace();
 				throw new NffgVerifierException();
 			}
-//			System.out.println(System.getProperty("it.polito.dp2.NFFG.sol1.NffgInfo.file"));
 			o =(Nffgs)u.unmarshal(new File(System.getProperty("it.polito.dp2.NFFG.sol1.NffgInfo.file")));
 			
 			if(o==null){
@@ -153,7 +152,6 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 				}).collect(Collectors.toList()).get(0);
 			
 			nffg.getPolicy().stream().forEach(policy -> {
-//TODO: FIX IT
 							NodeReader nrSrc = nr.getNodes().stream().filter(n->{
 								return(	n.getName().equals(policy.getSrc())	);
 								
@@ -166,16 +164,11 @@ public class NffgVerifier2 implements it.polito.dp2.NFFG.NffgVerifier {
 				
 							if(policy.getTraversal()==null){
 								//REACHABILITY POLICY
-								//it is NULL in case of traversal policy
-								
 								ReachabilityPolicyReader2 rpr = new ReachabilityPolicyReader2(policy, nr, nrSrc, nrDst);
 								setPolicyReader2.add(rpr);
 							}
 							else{
 								//TRAVERSAL POLICY
-								
-//								Traversal t = policy.getTraversal();
-								
 								TraversalPolicyReader2 tpr = new TraversalPolicyReader2(policy, nr, nrSrc, nrDst);
 								setPolicyReader2.add(tpr);
 							}

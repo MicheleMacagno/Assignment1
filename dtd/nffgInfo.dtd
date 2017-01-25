@@ -2,19 +2,19 @@
 
 <!ELEMENT nffg (node,node,node*,link+,policy*)>
 	<!ATTLIST nffg
-		 name  ID 		#REQUIRED
-		 update_time	CDATA #REQUIRED
+		 name  		ID 		#REQUIRED
+		 lastUpdate	CDATA 	#REQUIRED
 	>
 <!ELEMENT node EMPTY>
 <!ATTLIST node
 	name 			ID 		#REQUIRED
-	functional_type		(FW|DPI|NAT|SPAM|CACHE|VPN|WEB_SERVER|WEB_CLIENT|MAIL_SERVER|MAIL_CLIENT)	#REQUIRED	
+	functionality		(FW|DPI|NAT|SPAM|CACHE|VPN|WEB_SERVER|WEB_CLIENT|MAIL_SERVER|MAIL_CLIENT)	#REQUIRED	
 	
 >
 
 <!ELEMENT link EMPTY>
 <!ATTLIST link
-	name			ID		#REQUIRED
+	name				ID		#REQUIRED
 	src					IDREF	#REQUIRED
 	dst					IDREF	#REQUIRED
 >	
@@ -22,18 +22,18 @@
 <!ELEMENT policy (traversal?,verification?)>
 <!ATTLIST policy
 		name 		ID							#REQUIRED
+		positivity	(true|false)				#REQUIRED
 		src			IDREF						#REQUIRED
 		dst			IDREF						#REQUIRED
-		positivity	(true|false)				#REQUIRED
 
 >
 
 <!ELEMENT verification EMPTY>
 <!ATTLIST verification
 	
-		satisfied			(true|false)				#REQUIRED
+		verificationTime	CDATA						#REQUIRED
+		result				(true|false)				#REQUIRED
 		message				CDATA						#REQUIRED
-		verification_time	CDATA						#REQUIRED
 >
 
 <!ELEMENT traversal  (functionality+)>

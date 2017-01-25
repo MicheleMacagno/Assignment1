@@ -1,41 +1,61 @@
-Macagno Michele 231705
+Macagno Michele matr.231705
+
+Assignment1
+
 XML SCHEMA xsd Description
 
 For the xsd schema, I decided to use only elements (not attributes). This is a syntax choice encouraged
-by the w3schools.com hints about xml language.
+by the w3schools.com tutorials about xml language.
 
-The root element is nffgs, this element contains all the nffg elements,
-it is used only as container for these elements.
-
-nffgs is defined as complex type having minOccurs=1 for the nffg elemetns; in this 
-way a document without nffg elements is not validated, and the program does not read it.
+The root element is named "nffgs", this element contains all the "nffg" nested elements (of type "Nffg"),
+it is used only as container for "nffg" elements and to enforce constraints on uniqueness of nffg and policy names.
+nffgs is defined as complex type.
+It must contain element of type Nffg, having minOccurs=1 and maxOccurs unbounded; in this 
+way a document without nffg elements is not validated, and program exploiting validation of xml documents can 
+discard not conform xml documents. maxOccurs="unbounded" indicates the document can have an unlimited number of elements of type nffg.
 (Solution avoiding a lot of possible NullPointerExceptions)
 
-nffgs tag also enforce the uniqueness, inside the document, of the nffg name. 
+The global element "nffgs" is defined with an Anonymous type in order to ease the process of unmarshalling of xml documents referring to the schema.
 
-The uniqueness of the policy name and link name is enforced. Inside the same nffg we can't have nodes or links or policies
-with the same name, (enforced by <xsd:key name="link_name"> and <xsd:key name="node_name"> and <xsd:key name="unique_policy"> 
-and 	<xsd:key name="unique_policy">)
+All the other elements are defined with Named Types, so that they can be easily reused in many points of the schema.
 
+Inside the tag <nffgs> it is not possible to have duplicated nffg names. Each nffg, must be uniquely identified by its name.
+To enforce the uniqueness of nffg name inside an nffgs root element these lines of code have been added
+<xsd:key name="nffg_name">
+	<xsd:selector xpath="tns:nffg" />
+	<xsd:field xpath="tns:name" />
+</xsd:key>
+The scope of a key is the containing element in an instance document.
+A key means that data should be unique within a specified scope, non-nillable, and always present
 
-I used keyref in order to obtain references to nodes name. This is useful,
-for example, when I need to refer from source/destination node tags to the name of the node.
+The same solution was adopted to enforce the uniqueness of policies' name inside the xml document.
+<xsd:key> was used also to enforce The uniqueness of the node names and link names inside every single nffg.
+
+I used keyref in order to obtain references to nodes name. This is useful,for example,
+when I need to refer from source/destination tags of a link (or policy) to the name of the node.
 I inserted the keyref element in order to enforce the domain of the references,
-i.e. a Policy/Link inside an nffg can refer only to nodes belonging to that nffg.
+i.e. a Policy/Link inside an nffg can refer only to nodes belonging to that nffg. 
 
+ Example: The <src> element inside <link> must refer only to names of nodes declared inside the nffg (identied by <xsd:key name="node_name">)
+<xsd:keyref name="ref_link_src_node" refer="tns:node_name">
+	<xsd:selector xpath="tns:link" />
+	<xsd:field xpath="tns:src" />
+</xsd:keyref>
 
-I declared all types (complex and simple types) at the end of the
-xsd file. Then I called the newly created type directly from the <xsd:element> tags.
-(With the exception of the nffgs complex type - that is declared nested ),
-
-Every nffg has at least 2 nodes (source/destination), at least a link, but the presence of policies is not enforced (minOccurs=0). All these
+Every nffg has at least 2 nodes (the minimum number of nodes to create a link), at least a link, but the presence of policies is not enforced (minOccurs=0). All these
 parameters are described with the minOccurs and maxOccurs properties.
 
-Every Policy is by default a reachability policy. A traversal policy has an additional element (<traversal> with minOccurs=0), describing
+Every Policy is by default a reachability policy. A traversal policy can be defined adding an additional nested element (<traversal> with minOccurs=0), describing
 this is a traversal policy and enforcing the presence of at least one functionality to be traversed (minOccurs=1).
 
 To enforce constraints on number of elements I used minOccurs and maxOccurs.
 
-Name fields are described by a regular expression,to enforce the specifications of the javadoc documentation.
+Name fields of nffg, node and link are described by a regular expression,to enforce the specifications of the javadoc documentation.
+
+The simpleType imposing the restriction of type string was used to define the only possible functionalities of nodes inside the nffg.
+
+The xml schema defines a targetNamespace for documents referring to it.
+In each xml document using the schema it is necessary to introduce xmlns="" defining the namespace you want to assign to the default namespace
+and also information relatives to the location of the schema.
 
 

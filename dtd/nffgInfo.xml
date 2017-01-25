@@ -1,20 +1,27 @@
 <?xml version="1.0"?>
 <!DOCTYPE nffgs SYSTEM "nffgInfo.dtd">
 <nffgs>
-	<nffg name="nffg1" update_time="2015-07-21T21:00:00.000+02:00">
-		<node name="node11" functional_type="FW"  />
-		<node name="node12" functional_type="DPI"  />
-		<node name="node13" functional_type="SPAM"  />
+	<nffg name="nffg1" lastUpdate="2015-07-21T21:00:00.000+02:00">
+		<node name="node11" functionality="FW"  />
+		<node name="node12" functionality="DPI"  />
+		<node name="node13" functionality="SPAM"  />
 
-		<link name="link12" src="node11" dst="node12" />
+		<link 
+			name="link12" 
+			src="node11" 
+			dst="node12" 
+		/>
 		
 		
-		<policy name="policy11" positivity="true"
-			src="node11" dst="node12">
+		<policy 
+			name="policy11" 
+			positivity="true"
+			src="node11" 
+			dst="node12">
 			<verification 
-						satisfied="true" 
+						verificationTime="2015-07-21T21:00:00.000+02:00"
+						result="true" 
 						message="no messages for this policy"
-						verification_time="2015-07-21T21:00:00.000+02:00"
 			/>
 			
 		</policy>
@@ -29,30 +36,46 @@
 				<functionality name="FW" />
 				<functionality name="NAT" />
 			</traversal>
-			
+				
 			<verification
-				satisfied="true" message="no messages for this policy"
-				verification_time="2015-07-21T22:00:00.000+02:00"
+				verificationTime="2015-07-21T22:00:00.000+02:00"
+				result="true"
+				message="no messages for this policy"
 			/>
 		</policy>
 
 
 	</nffg>
 	
-	<nffg name="nffg2" update_time="2015-07-21T21:00:00.000+02:00">
-		<node name="node11B" functional_type="FW"  />
-		<node name="node12B" functional_type="DPI"  />
-		<node name="node13B" functional_type="SPAM"  />
+	<nffg 
+		name="nffg2" 
+		lastUpdate="2015-07-21T21:00:00.000+02:00">
+		<node 
+			name="node11B" 
+			functionality="FW"  />
+		<node 
+			name="node12B" 
+			functionality="DPI"  />
+		<node 
+			name="node13B" 
+			functionality="SPAM"  />
 
-		<link name="link12B" src="node11B" dst="node12B" />
+		<link 
+			name="link12B" 
+			src="node11B" 
+			dst="node12B" 
+		/>
 		
 		
-		<policy name="policy11B" positivity="true"
-			src="node11B" dst="node12B">
+		<policy 
+			name="policy11B" 
+			positivity="true"
+			src="node11B" 
+			dst="node12B">
 			<verification 
-						satisfied="false" 
-						message="Failed verification"
-						verification_time="2015-07-21T22:00:00.000+02:00"
+					result="false" 
+					message="Failed verification"
+					verificationTime="2015-07-21T22:00:00.000+02:00"
 			/>
 			
 		</policy>

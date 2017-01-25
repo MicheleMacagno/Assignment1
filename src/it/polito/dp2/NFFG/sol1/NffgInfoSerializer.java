@@ -39,15 +39,19 @@ public class NffgInfoSerializer {
 		
 		try{
 			factory = it.polito.dp2.NFFG.NffgVerifierFactory.newInstance();
+			monitor = factory.newNffgVerifier();
+		}catch(FactoryConfigurationError e){
+			//newInstance() can throw this Error.
+			//the other catch statements are added to improve robustness in case of unpredictable situations 
+			e.printStackTrace();
+			throw new NffgVerifierException();
+		}catch(Exception e){
+			e.printStackTrace();
+			throw new NffgVerifierException();
 		}catch(java.lang.Error e){
 			e.printStackTrace();
 			throw new NffgVerifierException();
-		}
-		
-		try{
-			monitor = factory.newNffgVerifier();
-		}catch(Exception e){
-			e.printStackTrace();
+		}catch(java.lang.Throwable e){
 			throw new NffgVerifierException();
 		}
 		
@@ -59,9 +63,7 @@ public class NffgInfoSerializer {
 	}
 	
 	/**
-	 * method used to initialize the unmarshaller
-	 * TODO: add the possibility to modify the output file name
-	 * TODO: verify why IOException catching rise an errors
+	 * method used to initialize the Marshaller
 	 */
 	public void prepareToMarshal(){
 			
@@ -105,7 +107,7 @@ public class NffgInfoSerializer {
 						//add the node to the list of nodes
 						nffg.getNode().add(n);
 					
-//LINKS - REMOVED BIDIRECIONAL LINKS
+//LINKS 
 						Set<LinkReader> linkSet = nr.getLinks();
 						for (LinkReader lr: linkSet){
 								Link l = new Link();
@@ -166,8 +168,7 @@ public class NffgInfoSerializer {
 							policy.setTraversal(t);
 						}
 //REACHABILITY						
-//						else{
-//						}
+
 						nffg.getPolicy().add(policy);
 						
 						
@@ -175,43 +176,8 @@ public class NffgInfoSerializer {
 						
 					});	
 					
-					//Set<ReachabilityPolicyReader> setRP = monitor.getPolicies();
 					
 			}
-			
-			//SYSTEM.OUT PRINTING
-			/*
-			nffgs.getNffg()
-				.forEach(a-> 
-						{
-							System.out.println(a.getName() + "\tUpdate: " +a.getLastUpdate().toString() + "\nNodes:");
-							a.getNode().forEach(b->{
-								//NODES
-								System.out.println("\t" + b.getName() + "\t"+ b.getFunctionality().toString());
-								
-							});
-							
-							System.out.println("Links:");
-							a.getLink().forEach(c->{
-								//LINKS
-								System.out.println("\t\tLink: "+ c.getName() +"\tSrc: "+c.getSrc() + "\tdst: " + c.getDst());
-							});
-							
-							a.getPolicy().forEach(pol ->{
-								//POLICY
-								System.out.println("\tPolicy:\t" + pol.getName() + "\tPositivity: " + pol.isPositivity() + "\t");
-								if(pol.getVerification()!=null){
-									System.out.println("\t\t\tMessage:\t" + pol.getVerification().getMessage());
-									System.out.println("\t\t\tVerif Time:\t" + pol.getVerification().getVerificationTime().toString());
-									System.out.println("\t\t\tSatisfied:\t" + pol.getVerification().isResult());
-									
-								}
-								
-							});
-						}
-				
-						);
-			*/
 			this.nffgs=nffgs;
 	}
 
@@ -240,6 +206,7 @@ public class NffgInfoSerializer {
 			}
 			else{
 				System.out.println("Impossible to create the XML. Something was wrong while converting data for the XML document\n");
+				System.exit(-3);
 			}
 		} catch (NffgVerifierException e) {
 			System.err.println("Could not instantiate data generator.");
